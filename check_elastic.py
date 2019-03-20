@@ -82,7 +82,7 @@ def check():
                 "from": 0,
                 "size": 1,
                 "sort": {
-                    "datetime": {"order": "desc"}
+                    ELASTIC_DATETIME: {"order": "desc"}
                 }
             })
     # pprint.pprint(res)
