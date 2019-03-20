@@ -30,6 +30,8 @@ MAIL_USER = 'Google account'    # foobar@gmail.com etc.
 MAIL_PASS = 'password (should be an app password)'
 ````
 
+When confirmed the script working, please deploy it by cron etc.
+
 ## Other great software
 
 - https://github.com/brendancarlson/Simple-Python-Server-Monitor
