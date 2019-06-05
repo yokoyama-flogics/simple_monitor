@@ -2,7 +2,11 @@
 
 This is a monitor script written by Python 2.
 
-## Objective of the script
+## Checking Elasticsearch Engine
+
+- ```check_elastic.py```
+
+### Objective of the script
 
 This script is intended to check if an IoT device is feeding documents
 to an Elasticsearch engine every one minute.
@@ -31,6 +35,29 @@ MAIL_PASS = 'password (should be an app password)'
 ````
 
 When confirmed the script working, please deploy it by cron etc.
+
+## Checking DHCP Server Activity
+
+- ```check_dhcp.py```
+
+### Objective of the script
+
+Similar to the Elasticsearch alert above.
+
+This script is intended to check if a DHCP server is correctly running.
+To run the script, you need to install nmap (https://nmap.org/).
+Checking DHCP server requires root privilege, so run visudo to configure
+sudo command so that it won't require password to run nmap.  (Please take
+care of security matters.)
+
+For example, add the following line by visudo.  You need to change yokoyama
+to your user id.
+
+````
+yokoyama ALL=(ALL) NOPASSWD: /usr/bin/pmset
+````
+
+In the script, DHCP_SERVER is your DHCP server name.  Please edit this.
 
 ## Other great software
 
